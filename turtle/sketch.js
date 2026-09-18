@@ -22,7 +22,7 @@ async function setup() {
 // ---------------------------------------------------------------
 
 function giveInstructions() {
-  turtle.penColor("#ff7a3c");
+  turtle.penColor("#0072c3");
   turtle.penWidth(8);
 
   // Press a face onto the canvas, so we can see where we started.
@@ -54,7 +54,7 @@ function giveInstructions() {
   turtle.penDown();
 
   //S
-  turtle.penColor("#4cc9f0");
+  turtle.penColor("#1ecaff");
   turtle.penUp();
   turtle.forward(20);
   turtle.left(180);
