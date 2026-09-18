@@ -5,11 +5,11 @@
 let turtle;
 
 async function setup() {
-  createCanvas(800, 600);
+  createCanvas(800, 1200);
 
   // The turtle's face. Drop any image into this folder and point at it here —
   // it gets scaled and cropped into a circle, so anything roughly square works.
-  const face = await loadImage("turtle.jpg");
+  const face = await loadImage("turtle2.png");
 
   // Make a turtle near the bottom left, facing up.
   turtle = new KardunTurtle(200, 420, face);
@@ -23,32 +23,48 @@ async function setup() {
 
 function giveInstructions() {
   turtle.penColor("#ff7a3c");
-  turtle.penWidth(4);
+  turtle.penWidth(8);
 
   // Press a face onto the canvas, so we can see where we started.
   turtle.stamp();
 
-  // A square, the long way round.
-  turtle.forward(180);
-  turtle.right(90);
-  turtle.forward(180);
-  turtle.right(90);
-  turtle.forward(180);
-  turtle.right(90);
-  turtle.forward(180);
-  turtle.right(90);
+  // // A square, the long way round.
+  // turtle.forward(180);
+  // turtle.right(90);
+  // turtle.forward(180);
+  // turtle.right(90);
+  // turtle.forward(180);
+  // turtle.right(90);
+  // turtle.forward(180);
+  // turtle.right(90);
 
-  // Lift the pen, walk somewhere new, put it back down.
-  turtle.penUp();
-  turtle.right(90);
-  turtle.forward(260);
+  // A
+  turtle.right(25);
+  turtle.forward(180 * 2);
+  turtle.right(135);
+  turtle.forward(180);
+  turtle.right(110);
+  turtle.forward(100);
+  turtle.right(120);
+  turtle.forward(90);
+  turtle.right(120);
+
+  turtle.forward(300);
+  turtle.left(120);
   turtle.penDown();
 
-  // A triangle, turning the other way.
+  //S
   turtle.penColor("#4cc9f0");
-  turtle.forward(180);
+  turtle.penUp();
+  turtle.forward(20);
+  turtle.left(180);
+  turtle.penDown();
   turtle.left(120);
   turtle.forward(180);
+  turtle.left(120);
+  turtle.forward(280);
+  turtle.left(120);
+
   turtle.left(120);
   turtle.forward(180);
   turtle.left(120);
